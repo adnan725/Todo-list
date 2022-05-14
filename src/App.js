@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import DataForm from "./components/DataIForm/DataForm";
 import './App.css';
+import RenderData from "./components/RenderData/RenderData";
 
+const data = [
+    {
+        date : '23 Dec 2017',
+        item: 'Food',
+        price: 23
+    },
+    {
+        date : '19 Aug 2017',
+        item: 'Mobile',
+        price: 27
+    },
+    {
+        date : '23 Dec 2017',
+        item: 'Laptop',
+        price: 31
+    },
+]
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+    return (
+    <div className="app">
+        <DataForm/>
     </div>
   );
 }

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es6", "dom" ],
+    "listFiles": true,
+    "noImplicitAny": true,
+    "pretty": true,
+    "strictNullChecks": true,
+    "target": "ES5",
+    "traceResolution": true,
+    "typeRoots": [ "./node_modules/@types" ],
+    "baseUrl": "./src",
+    "paths": {
+      "express": ["node_modules/express/lib/express"]
+    }
+  }
+}

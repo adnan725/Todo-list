@@ -1,0 +1,27 @@
+.data {
+    background-color: #674501;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f3e0c2;
+    padding: 0 1rem;
+    font-size: 1.3rem;
+    border-radius: 7px;
+}
+
+.date {
+    padding: 10px;
+    background-color: #f3e0c2;
+    color: #332400;
+    border-radius: 7px;
+}
+
+.item {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.deleteButton {
+    cursor: pointer;
+}
