@@ -10,6 +10,10 @@ function getLocalItems() {
         return []
     }
 }
+const monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+];
+const date = new Date()
 
 function DataIForm() {
 
@@ -37,7 +41,7 @@ function DataIForm() {
         }
         // if input field is empty, return without doing anything
         if(!enteredValue) {
-            
+
             //alert('Please write something')
         } else {
             setListItems([...listItems, enteredValue])
@@ -79,6 +83,11 @@ function DataIForm() {
             <div className="itemsContainer">
                 {listItems.map((item, id) => {
                     return <div className="item" key={id}>
+                        <div className="getDate">
+                            <p>{date.getDate()}</p>
+                            <p className="month">{monthNames[date.getMonth()]}</p>
+                            <p>{date.getFullYear()}</p>
+                        </div>
                         <p>{item}</p>
                         <p className="deleteButton" onClick={() => deleteItemHandler(id)}>🗑️</p>
                     </div>
