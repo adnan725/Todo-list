@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import './DataForm.css';
 import Button from "../Button/Button";
 
-function DataIForm(props) {
+function getLocalItems() {
+    const list = localStorage.getItem('lists')
+    if (list) {
+        return JSON.parse(localStorage.getItem('lists'))
+    } else {
+        return []
+    }
+}
+
+function DataIForm() {
 
     //store input value into 'enteredValue'
     const [enteredValue, setEnteredValue] = useState('');
 
     //store enteredValues into array of Todos
-    const [listItems, setListItems] = useState([])
+    const [listItems, setListItems] = useState(getLocalItems())
 
     // to keep track if input field is empty
     const [isValid, setIsValid] = useState(false)
@@ -28,7 +37,7 @@ function DataIForm(props) {
         }
         // if input field is empty, return without doing anything
         if(!enteredValue) {
-            return
+            
             //alert('Please write something')
         } else {
             setListItems([...listItems, enteredValue])
@@ -47,6 +56,10 @@ function DataIForm(props) {
     function clearAllHandler() {
         setListItems([])
     }
+
+    useEffect(() => {
+        localStorage.setItem('lists', JSON.stringify(listItems))
+    }, [listItems])
 
     return (
         <div className="formContainer">
