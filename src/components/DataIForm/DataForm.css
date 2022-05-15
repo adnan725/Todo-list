@@ -16,7 +16,6 @@
 
 .form.invalid input {
   border-color: #ff4200;
-  background-color: #f57852;
 }
 
 .form.invalid label {
