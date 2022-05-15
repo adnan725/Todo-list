@@ -67,12 +67,9 @@ function DataIForm() {
 
     return (
         <div className="formContainer">
-            <form className='form' onSubmit={formSubmitHandler}>
-                <label style={{color: !isValid ? 'red' : '#332400'}}>
-                    Add to list
-                </label>
+            <form className={`form ${!isValid ? 'invalid' : ''}`} onSubmit={formSubmitHandler}>
+                <label>Add to list</label>
                 <input
-                    style={{borderColor: !isValid ? '#da5123' : '#f3e0c2'}}
                     onChange={inputChangeHandler}
                     type="text"
                     value={enteredValue}
