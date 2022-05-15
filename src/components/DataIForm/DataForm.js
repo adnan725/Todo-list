@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import './DataForm.css';
 import Button from "../Button/Button";
+import {FaDeaf, FaHeart, FaTrash} from "react-icons/fa";
+
 
 function getLocalItems() {
     const list = localStorage.getItem('lists')
@@ -86,7 +88,9 @@ function DataIForm() {
                             <p>{date.getFullYear()}</p>
                         </div>
                         <p>{item}</p>
-                        <p className="deleteButton" onClick={() => deleteItemHandler(id)}>🗑️</p>
+                        <p className="deleteButton" onClick={() => deleteItemHandler(id)}>
+                            <FaTrash className="icon"/>
+                        </p>
                     </div>
                 })}
             </div>

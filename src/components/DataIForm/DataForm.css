@@ -64,6 +64,14 @@ input:hover {
   background-color: #503600;
 }
 
+.icon {
+  transition: all 300ms;
+}
+
+.icon:hover {
+  color: #7a5101;
+}
+
 .finalList {
   margin-top: 5rem;
   width: 100%;
